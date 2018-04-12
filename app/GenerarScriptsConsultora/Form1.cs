@@ -13,7 +13,7 @@ namespace GenerarScriptsConsultora
             InitializeComponent();
         }
 
-        private void btnGenerar_Click(object sender, EventArgs e)
+        private List<string> GetPaises()
         {
             var i = tcBD.SelectedIndex;
             TabControl tab = new TabControl();
@@ -21,6 +21,28 @@ namespace GenerarScriptsConsultora
 
             if (i == 0) tab = tcTiposBD57;
 
+            foreach (Control control in tab.SelectedTab.Controls)
+            {
+                if (control.GetType().ToString() == "System.Windows.Forms.CheckBox")
+                {
+                    CheckBox chkPais = (CheckBox)control;
+                    if (chkPais.Checked)
+                    {
+                        paises.Add(chkPais.Tag.ToString());
+                    }
+                }
+            }
+
+            return paises;
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            var i = tcBD.SelectedIndex;
+            TabControl tab = new TabControl();
+            List<string> paises = new List<string>();
+
+            if (i == 0) tab = tcTiposBD57;
 
             var scriptIni = new StringBuilder();
             int cantVacio = 0;
@@ -84,17 +106,6 @@ namespace GenerarScriptsConsultora
 
             txtResultado.Text = scriptGenerado.ToString();
 
-            //foreach (Control control in tab.SelectedTab.Controls)
-            //{
-            //    if (control.GetType().ToString() == "System.Windows.Forms.TextBox")
-            //    {
-            //        TextBox txtResult = (TextBox)control;
-            //        if (txtResult.Tag != null && txtResult.Tag.ToString() == "txtResultado")
-            //        {
-            //            txtResult.Text = scriptGenerado.ToString();
-            //        }
-            //    }
-            //}
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -167,6 +178,7 @@ namespace GenerarScriptsConsultora
         }
 
         // SaveFile(Encoding.UTF8);
+        // no se utiliza es una demo
         private static void SaveFile(Encoding encoding)
         {
             Console.WriteLine("Encoding: {0}", encoding.EncodingName);
@@ -181,5 +193,142 @@ namespace GenerarScriptsConsultora
             textBox1.Text = string.Empty; txtResultado.Text = string.Empty;
         }
 
+        #region Pase
+        private void PaseBtnGenerar_Click(object sender, EventArgs e)
+        {
+            List<string> paises = GetPaises();
+
+            string siglasEquipo = paseSiglasEquipo.Text.Trim();
+            string urlScript = paseUrlScript.Text.Trim();
+
+            if (siglasEquipo == "" || paises.Count == 0 || urlScript == "")
+            {
+                MessageBox.Show("Debe tener \n Seleccionar Paises \n Siglas del Equipo \n Ruta Script del Pase", "Generar Scripts", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            foreach (string file in Directory.EnumerateFiles(urlScript, "*.sql"))
+            {
+                ReadLine(file, paises);
+            }
+
+        }
+
+        private void ReadLine(string direc, List<string> paises)
+        {
+            if (!File.Exists(direc))
+                return;
+
+            string siglasEquipo = paseSiglasEquipo.Text.Trim();
+            siglasEquipo = siglasEquipo[0] == '_' ? siglasEquipo : ("_" + siglasEquipo);
+
+            bool isPais = false;
+            bool addPais = false;
+
+            StringBuilder scriptGeneradoPase = new StringBuilder();
+
+            using (StreamReader sr = new StreamReader(direc))
+            {
+                while (sr.Peek() >= 0)
+                {
+                    var linea = sr.ReadLine();
+                    linea = linea.TrimEnd();
+                    var lineaAux = linea.Trim().ToLower();
+                    var pais = "";
+                    if (lineaAux.Contains("use "))
+                    {
+                        pais = lineaAux.Split(' ')[1];
+                        isPais = PaisesContains(paises, pais);
+                        if (isPais)
+                        {
+                            addPais = true;
+                        }
+                    }
+
+                    if (isPais)
+                    {
+                        if (addPais)
+                        {
+                            scriptGeneradoPase.Append("GO");
+                            scriptGeneradoPase.AppendLine();
+                            scriptGeneradoPase.Append("USE " + pais + siglasEquipo);
+                            scriptGeneradoPase.AppendLine();
+                            scriptGeneradoPase.Append("GO");
+                            scriptGeneradoPase.AppendLine();
+                            addPais = false;
+                            continue;
+                        }
+
+                        scriptGeneradoPase.Append(linea);
+                        scriptGeneradoPase.AppendLine();
+                    }
+                }
+            }
+
+            if (scriptGeneradoPase.ToString() == "")
+                return;
+
+            direc = NuevaRuta(direc, siglasEquipo);
+            ExportarScriptEnDireccion(direc, scriptGeneradoPase);
+        }
+
+        private bool PaisesContains(List<string> paises, string paisbuscar)
+        {
+            bool isPais = false;
+            foreach (var pais in paises)
+            {
+                if (paisbuscar.Trim().ToLower() == pais.Trim().ToLower())
+                {
+                    isPais = true;
+                    break;
+                }
+            }
+            return isPais;
+        }
+
+        private string NuevaRuta(string direc, string siglas)
+        {
+            var list = direc.Split('\\');
+            var nombre = list[list.Length - 1];
+            var carpetaOri = direc.Substring(0, direc.Length - nombre.Length);
+            var carpeta = paseUrlGenerado.Text.Trim();
+
+            if (carpeta == "" || (carpeta == carpetaOri && carpetaOri != "") )
+            {
+                carpeta = carpetaOri + siglas;
+            }
+
+            if (!Directory.Exists(carpeta))
+            {
+                Directory.CreateDirectory(carpeta);
+            }
+            paseUrlGenerado.Text = carpeta;
+
+            direc = carpeta + "\\" + nombre;
+            return direc;
+        }
+
+        private void ExportarScriptEnDireccion(string direc, StringBuilder script)
+        {
+            try
+            {
+                if (File.Exists(direc))
+                {
+                    File.Delete(direc);
+                }
+
+                using (FileStream fs = File.Create(direc))
+                {
+                    Byte[] info = new UTF8Encoding(true).GetBytes(script.ToString());
+                    fs.Write(info, 0, info.Length);
+                }
+
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        #endregion
     }
 }

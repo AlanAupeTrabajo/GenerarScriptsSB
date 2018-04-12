@@ -76,11 +76,35 @@
             this.chkCL = new System.Windows.Forms.CheckBox();
             this.chkBO = new System.Windows.Forms.CheckBox();
             this.tcBD = new System.Windows.Forms.TabControl();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Equipo = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.paseSiglasEquipo = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.paseUrlScript = new System.Windows.Forms.TextBox();
+            this.PaseBtnGenerar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.paseUrlGenerado = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             this.tcTiposBD57.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tcBD.SuspendLayout();
+            this.Equipo.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -89,7 +113,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(984, 494);
+            this.tabPage1.Size = new System.Drawing.Size(989, 494);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AWNTSXX";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -98,15 +122,18 @@
             // 
             this.tcTiposBD57.Controls.Add(this.tabPage3);
             this.tcTiposBD57.Controls.Add(this.tabPage4);
+            this.tcTiposBD57.Controls.Add(this.Equipo);
             this.tcTiposBD57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcTiposBD57.Location = new System.Drawing.Point(3, 3);
             this.tcTiposBD57.Name = "tcTiposBD57";
             this.tcTiposBD57.SelectedIndex = 0;
-            this.tcTiposBD57.Size = new System.Drawing.Size(978, 488);
+            this.tcTiposBD57.Size = new System.Drawing.Size(983, 488);
             this.tcTiposBD57.TabIndex = 0;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.textBox2);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.txtDireccion);
             this.tabPage3.Controls.Add(this.btnLimpiar);
@@ -133,7 +160,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(970, 462);
+            this.tabPage3.Size = new System.Drawing.Size(975, 462);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "BelcorpPais";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -424,7 +451,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(970, 462);
+            this.tabPage4.Size = new System.Drawing.Size(975, 462);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "ODS_Pais";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -673,14 +700,260 @@
             this.tcBD.Location = new System.Drawing.Point(0, 0);
             this.tcBD.Name = "tcBD";
             this.tcBD.SelectedIndex = 0;
-            this.tcBD.Size = new System.Drawing.Size(992, 520);
+            this.tcBD.Size = new System.Drawing.Size(997, 520);
             this.tcBD.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(184, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Equipo:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(233, 28);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(143, 20);
+            this.textBox2.TabIndex = 25;
+            // 
+            // Equipo
+            // 
+            this.Equipo.Controls.Add(this.label9);
+            this.Equipo.Controls.Add(this.paseUrlGenerado);
+            this.Equipo.Controls.Add(this.PaseBtnGenerar);
+            this.Equipo.Controls.Add(this.label8);
+            this.Equipo.Controls.Add(this.paseUrlScript);
+            this.Equipo.Controls.Add(this.label7);
+            this.Equipo.Controls.Add(this.paseSiglasEquipo);
+            this.Equipo.Controls.Add(this.checkBox1);
+            this.Equipo.Controls.Add(this.checkBox2);
+            this.Equipo.Controls.Add(this.checkBox3);
+            this.Equipo.Controls.Add(this.checkBox4);
+            this.Equipo.Controls.Add(this.checkBox5);
+            this.Equipo.Controls.Add(this.checkBox6);
+            this.Equipo.Controls.Add(this.checkBox7);
+            this.Equipo.Controls.Add(this.checkBox8);
+            this.Equipo.Controls.Add(this.checkBox9);
+            this.Equipo.Controls.Add(this.checkBox10);
+            this.Equipo.Controls.Add(this.checkBox11);
+            this.Equipo.Controls.Add(this.checkBox12);
+            this.Equipo.Controls.Add(this.checkBox13);
+            this.Equipo.Location = new System.Drawing.Point(4, 22);
+            this.Equipo.Name = "Equipo";
+            this.Equipo.Size = new System.Drawing.Size(975, 462);
+            this.Equipo.TabIndex = 2;
+            this.Equipo.Text = "Equipo";
+            this.Equipo.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(917, 15);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(48, 17);
+            this.checkBox1.TabIndex = 32;
+            this.checkBox1.Tag = "BelcorpPeru";
+            this.checkBox1.Text = "Perú";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(849, 15);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(60, 17);
+            this.checkBox2.TabIndex = 31;
+            this.checkBox2.Tag = "BelcorpMexico";
+            this.checkBox2.Text = "México";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(774, 15);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(69, 17);
+            this.checkBox3.TabIndex = 30;
+            this.checkBox3.Tag = "BelcorpColombia";
+            this.checkBox3.Text = "Colombia";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(692, 15);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(76, 17);
+            this.checkBox4.TabIndex = 29;
+            this.checkBox4.Tag = "BelcorpVenezuela";
+            this.checkBox4.Text = "Venezuela";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(612, 15);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(80, 17);
+            this.checkBox5.TabIndex = 28;
+            this.checkBox5.Tag = "BelcorpSalvador";
+            this.checkBox5.Text = "El Salvador";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(524, 15);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(82, 17);
+            this.checkBox6.TabIndex = 27;
+            this.checkBox6.Tag = "BelcorpPuertoRico";
+            this.checkBox6.Text = "Puerto Rico";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(453, 15);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(65, 17);
+            this.checkBox7.TabIndex = 26;
+            this.checkBox7.Tag = "BelcorpPanama";
+            this.checkBox7.Text = "Panamá";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(370, 15);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(77, 17);
+            this.checkBox8.TabIndex = 25;
+            this.checkBox8.Tag = "BelcorpGuatemala";
+            this.checkBox8.Text = "Guatemala";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(298, 15);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(66, 17);
+            this.checkBox9.TabIndex = 24;
+            this.checkBox9.Tag = "BelcorpEcuador";
+            this.checkBox9.Text = "Ecuador";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(210, 15);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(82, 17);
+            this.checkBox10.TabIndex = 23;
+            this.checkBox10.Tag = "BelcorpDominicana";
+            this.checkBox10.Text = "Dominicana";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(126, 15);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(78, 17);
+            this.checkBox11.TabIndex = 22;
+            this.checkBox11.Tag = "BelcorpCostaRica";
+            this.checkBox11.Text = "Costa Rica";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(71, 15);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(49, 17);
+            this.checkBox12.TabIndex = 21;
+            this.checkBox12.Tag = "BelcorpChile";
+            this.checkBox12.Text = "Chile";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(8, 15);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(57, 17);
+            this.checkBox13.TabIndex = 20;
+            this.checkBox13.Tag = "BelcorpBolivia";
+            this.checkBox13.Text = "Bolivia";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Siglas del Equipo:";
+            // 
+            // paseSiglasEquipo
+            // 
+            this.paseSiglasEquipo.Location = new System.Drawing.Point(125, 47);
+            this.paseSiglasEquipo.Name = "paseSiglasEquipo";
+            this.paseSiglasEquipo.Size = new System.Drawing.Size(143, 20);
+            this.paseSiglasEquipo.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Ruta Script del Pase:";
+            // 
+            // paseUrlScript
+            // 
+            this.paseUrlScript.Location = new System.Drawing.Point(125, 81);
+            this.paseUrlScript.Name = "paseUrlScript";
+            this.paseUrlScript.Size = new System.Drawing.Size(748, 20);
+            this.paseUrlScript.TabIndex = 35;
+            // 
+            // PaseBtnGenerar
+            // 
+            this.PaseBtnGenerar.Location = new System.Drawing.Point(125, 158);
+            this.PaseBtnGenerar.Name = "PaseBtnGenerar";
+            this.PaseBtnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.PaseBtnGenerar.TabIndex = 38;
+            this.PaseBtnGenerar.Text = "Generar";
+            this.PaseBtnGenerar.UseVisualStyleBackColor = true;
+            this.PaseBtnGenerar.Click += new System.EventHandler(this.PaseBtnGenerar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 122);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 13);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Ruta Script Generado:";
+            // 
+            // paseUrlGenerado
+            // 
+            this.paseUrlGenerado.Location = new System.Drawing.Point(125, 119);
+            this.paseUrlGenerado.Name = "paseUrlGenerado";
+            this.paseUrlGenerado.Size = new System.Drawing.Size(748, 20);
+            this.paseUrlGenerado.TabIndex = 39;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 520);
+            this.ClientSize = new System.Drawing.Size(997, 520);
             this.Controls.Add(this.tcBD);
             this.Name = "Form1";
             this.Text = "Generar scripts";
@@ -691,6 +964,8 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tcBD.ResumeLayout(false);
+            this.Equipo.ResumeLayout(false);
+            this.Equipo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -745,6 +1020,29 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TabPage Equipo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox paseUrlScript;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox paseSiglasEquipo;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.Button PaseBtnGenerar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox paseUrlGenerado;
     }
 }
 
