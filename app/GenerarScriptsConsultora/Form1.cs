@@ -45,7 +45,7 @@ namespace GenerarScriptsConsultora
             if (i == 0) tab = tcTiposBD57;
 
             var scriptIni = new StringBuilder();
-            int cantVacio = 0;
+            //int cantVacio = 0;
             string lineaTxt = "";
             foreach (Control control in tab.SelectedTab.Controls)
             {
@@ -71,14 +71,6 @@ namespace GenerarScriptsConsultora
                             {
                                 lineaTxt = linea.TrimEnd();
 
-                                cantVacio += lineaTxt == "" ? 1 : 0;
-
-                                if (cantVacio == 2)
-                                {
-                                    cantVacio = 0;
-                                    continue;
-                                }
-
                                 scriptIni.Append(lineaTxt);
                                 scriptIni.AppendLine();
                             }
@@ -88,6 +80,8 @@ namespace GenerarScriptsConsultora
 
             var script = scriptIni.ToString();
             if (script == "") return;
+
+            //Formatear(script);
 
             StringBuilder scriptGenerado = new StringBuilder();
             scriptGenerado.Append("GO");
@@ -209,6 +203,7 @@ namespace GenerarScriptsConsultora
 
             foreach (string file in Directory.EnumerateFiles(urlScript, "*.sql"))
             {
+                //FormatoArchivo(file);
                 ReadLine(file, paises);
             }
 
@@ -277,7 +272,13 @@ namespace GenerarScriptsConsultora
             bool isPais = false;
             foreach (var pais in paises)
             {
-                if (paisbuscar.Trim().ToLower() == pais.Trim().ToLower())
+                var paistrim = pais.Trim().ToLower();
+                paisbuscar = paisbuscar.Trim().ToLower();
+                if (paisbuscar == paistrim
+                    || paisbuscar == paistrim + ";"
+                    || paisbuscar == "[" + paistrim + "]"
+                    || paisbuscar == "[" + paistrim + "];"
+                )
                 {
                     isPais = true;
                     break;
@@ -293,7 +294,7 @@ namespace GenerarScriptsConsultora
             var carpetaOri = direc.Substring(0, direc.Length - nombre.Length);
             var carpeta = paseUrlGenerado.Text.Trim();
 
-            if (carpeta == "" || (carpeta == carpetaOri && carpetaOri != "") )
+            if (carpeta == "" || (carpeta == carpetaOri && carpetaOri != ""))
             {
                 carpeta = carpetaOri + siglas;
             }
@@ -329,6 +330,78 @@ namespace GenerarScriptsConsultora
             }
         }
 
+        #endregion
+
+        #region Extra
+
+        private void FormatoArchivo(string direc)
+        {
+            if (!File.Exists(direc))
+                return;
+
+
+        }
+
+        private string GetNombreArchivo(string direc)
+        {
+
+            return direc;
+        }
+
+        private void Formatear(string cadena)
+        {
+            var txtBuild = new StringBuilder();
+
+            cadena = Limpiar(cadena);
+            var lista = cadena.Split(';');
+            
+            foreach (var fila in lista)
+            {
+                if (fila.Contains("||"))
+                {
+                    continue;
+                }
+
+                var lista2 = fila.Replace("))", "||").Split('|');
+                foreach (var campo in lista2)
+                {
+                    if (campo == "" || campo.Contains("HasColumn"))
+                    {
+                        continue;
+                    }
+                    txtBuild.Append(Remplazar(campo) + ";");
+                    txtBuild.AppendLine();
+                }
+            }
+
+            txtResultado.Text = txtBuild.ToString();
+
+        }
+
+        private string Limpiar(string cadena)
+        {
+            cadena = cadena
+                .Replace(" this.", "")
+                .Replace(" ", "")
+                .Replace("\n", "")
+                .Replace("\r", "")
+                .Replace("\t", "");
+
+            if (cadena.Contains(" "))
+            {
+                cadena = Limpiar(cadena);
+            }
+            return cadena;
+        }
+        private string Remplazar(string cadena)
+        {
+            cadena = cadena
+                .Replace("row[", "")
+                .Replace("]", "")
+                .Replace("Convert.", "row.");
+
+            return cadena;
+        }
         #endregion
     }
 }

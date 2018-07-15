@@ -31,6 +31,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tcTiposBD57 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -75,10 +77,14 @@
             this.chkCR = new System.Windows.Forms.CheckBox();
             this.chkCL = new System.Windows.Forms.CheckBox();
             this.chkBO = new System.Windows.Forms.CheckBox();
-            this.tcBD = new System.Windows.Forms.TabControl();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.Equipo = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.paseUrlGenerado = new System.Windows.Forms.TextBox();
+            this.PaseBtnGenerar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.paseUrlScript = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.paseSiglasEquipo = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -92,19 +98,13 @@
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.paseSiglasEquipo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.paseUrlScript = new System.Windows.Forms.TextBox();
-            this.PaseBtnGenerar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.paseUrlGenerado = new System.Windows.Forms.TextBox();
+            this.tcBD = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             this.tcTiposBD57.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tcBD.SuspendLayout();
             this.Equipo.SuspendLayout();
+            this.tcBD.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -164,6 +164,22 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "BelcorpPais";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(184, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Equipo:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(233, 28);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(143, 20);
+            this.textBox2.TabIndex = 25;
             // 
             // label6
             // 
@@ -693,32 +709,6 @@
             this.chkBO.Text = "Bolivia";
             this.chkBO.UseVisualStyleBackColor = true;
             // 
-            // tcBD
-            // 
-            this.tcBD.Controls.Add(this.tabPage1);
-            this.tcBD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcBD.Location = new System.Drawing.Point(0, 0);
-            this.tcBD.Name = "tcBD";
-            this.tcBD.SelectedIndex = 0;
-            this.tcBD.Size = new System.Drawing.Size(997, 520);
-            this.tcBD.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Equipo:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(233, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 20);
-            this.textBox2.TabIndex = 25;
-            // 
             // Equipo
             // 
             this.Equipo.Controls.Add(this.label9);
@@ -747,6 +737,64 @@
             this.Equipo.TabIndex = 2;
             this.Equipo.Text = "Equipo";
             this.Equipo.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 122);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 13);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Ruta Script Generado:";
+            // 
+            // paseUrlGenerado
+            // 
+            this.paseUrlGenerado.Location = new System.Drawing.Point(125, 119);
+            this.paseUrlGenerado.Name = "paseUrlGenerado";
+            this.paseUrlGenerado.Size = new System.Drawing.Size(748, 20);
+            this.paseUrlGenerado.TabIndex = 39;
+            // 
+            // PaseBtnGenerar
+            // 
+            this.PaseBtnGenerar.Location = new System.Drawing.Point(125, 158);
+            this.PaseBtnGenerar.Name = "PaseBtnGenerar";
+            this.PaseBtnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.PaseBtnGenerar.TabIndex = 38;
+            this.PaseBtnGenerar.Text = "Generar";
+            this.PaseBtnGenerar.UseVisualStyleBackColor = true;
+            this.PaseBtnGenerar.Click += new System.EventHandler(this.PaseBtnGenerar_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Ruta Script del Pase:";
+            // 
+            // paseUrlScript
+            // 
+            this.paseUrlScript.Location = new System.Drawing.Point(125, 81);
+            this.paseUrlScript.Name = "paseUrlScript";
+            this.paseUrlScript.Size = new System.Drawing.Size(748, 20);
+            this.paseUrlScript.TabIndex = 35;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Siglas del Equipo.:";
+            // 
+            // paseSiglasEquipo
+            // 
+            this.paseSiglasEquipo.Location = new System.Drawing.Point(125, 47);
+            this.paseSiglasEquipo.Name = "paseSiglasEquipo";
+            this.paseSiglasEquipo.Size = new System.Drawing.Size(143, 20);
+            this.paseSiglasEquipo.TabIndex = 33;
             // 
             // checkBox1
             // 
@@ -891,63 +939,15 @@
             this.checkBox13.Text = "Bolivia";
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // tcBD
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Siglas del Equipo:";
-            // 
-            // paseSiglasEquipo
-            // 
-            this.paseSiglasEquipo.Location = new System.Drawing.Point(125, 47);
-            this.paseSiglasEquipo.Name = "paseSiglasEquipo";
-            this.paseSiglasEquipo.Size = new System.Drawing.Size(143, 20);
-            this.paseSiglasEquipo.TabIndex = 33;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 13);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Ruta Script del Pase:";
-            // 
-            // paseUrlScript
-            // 
-            this.paseUrlScript.Location = new System.Drawing.Point(125, 81);
-            this.paseUrlScript.Name = "paseUrlScript";
-            this.paseUrlScript.Size = new System.Drawing.Size(748, 20);
-            this.paseUrlScript.TabIndex = 35;
-            // 
-            // PaseBtnGenerar
-            // 
-            this.PaseBtnGenerar.Location = new System.Drawing.Point(125, 158);
-            this.PaseBtnGenerar.Name = "PaseBtnGenerar";
-            this.PaseBtnGenerar.Size = new System.Drawing.Size(75, 23);
-            this.PaseBtnGenerar.TabIndex = 38;
-            this.PaseBtnGenerar.Text = "Generar";
-            this.PaseBtnGenerar.UseVisualStyleBackColor = true;
-            this.PaseBtnGenerar.Click += new System.EventHandler(this.PaseBtnGenerar_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 122);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 13);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Ruta Script Generado:";
-            // 
-            // paseUrlGenerado
-            // 
-            this.paseUrlGenerado.Location = new System.Drawing.Point(125, 119);
-            this.paseUrlGenerado.Name = "paseUrlGenerado";
-            this.paseUrlGenerado.Size = new System.Drawing.Size(748, 20);
-            this.paseUrlGenerado.TabIndex = 39;
+            this.tcBD.Controls.Add(this.tabPage1);
+            this.tcBD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcBD.Location = new System.Drawing.Point(0, 0);
+            this.tcBD.Name = "tcBD";
+            this.tcBD.SelectedIndex = 0;
+            this.tcBD.Size = new System.Drawing.Size(997, 520);
+            this.tcBD.TabIndex = 0;
             // 
             // Form1
             // 
@@ -963,9 +963,9 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.tcBD.ResumeLayout(false);
             this.Equipo.ResumeLayout(false);
             this.Equipo.PerformLayout();
+            this.tcBD.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -16,3 +16,13 @@ E:\Proyectos\GenerarScriptsConsultora\GenerarScriptsConsultora\GenerarScriptsCon
 E:\Proyectos\GenerarScriptsConsultora\GenerarScriptsConsultora\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.csproj.CoreCompileInputs.cache
 E:\Proyectos\GenerarScriptsConsultora\GenerarScriptsConsultora\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.exe
 E:\Proyectos\GenerarScriptsConsultora\GenerarScriptsConsultora\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.pdb
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\bin\Release\GenerarScriptsConsultora.exe.config
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\bin\Release\GenerarScriptsConsultora.exe
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\bin\Release\GenerarScriptsConsultora.pdb
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.csprojResolveAssemblyReference.cache
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.Form1.resources
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.Properties.Resources.resources
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.csproj.GenerateResource.Cache
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.csproj.CoreCompileInputs.cache
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.exe
+E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Release\GenerarScriptsConsultora.pdb
