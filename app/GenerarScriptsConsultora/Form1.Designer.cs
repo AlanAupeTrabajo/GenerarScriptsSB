@@ -78,6 +78,7 @@
             this.chkCL = new System.Windows.Forms.CheckBox();
             this.chkBO = new System.Windows.Forms.CheckBox();
             this.Equipo = new System.Windows.Forms.TabPage();
+            this.txtRespuestaEquipo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.paseUrlGenerado = new System.Windows.Forms.TextBox();
             this.PaseBtnGenerar = new System.Windows.Forms.Button();
@@ -98,13 +99,23 @@
             this.chbCR = new System.Windows.Forms.CheckBox();
             this.chbCL = new System.Windows.Forms.CheckBox();
             this.chbBO = new System.Windows.Forms.CheckBox();
+            this.tpGroupFile = new System.Windows.Forms.TabPage();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnGroupFile = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDirectoryEnd = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtDirectoryOrigin = new System.Windows.Forms.TextBox();
             this.tcBD = new System.Windows.Forms.TabControl();
-            this.txtRespuestaEquipo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtFileExtension = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             this.tcTiposBD57.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.Equipo.SuspendLayout();
+            this.tpGroupFile.SuspendLayout();
             this.tcBD.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,6 +135,7 @@
             this.tcTiposBD57.Controls.Add(this.tabPage3);
             this.tcTiposBD57.Controls.Add(this.tabPage4);
             this.tcTiposBD57.Controls.Add(this.Equipo);
+            this.tcTiposBD57.Controls.Add(this.tpGroupFile);
             this.tcTiposBD57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcTiposBD57.Location = new System.Drawing.Point(3, 3);
             this.tcTiposBD57.Name = "tcTiposBD57";
@@ -740,6 +752,17 @@
             this.Equipo.Text = "Equipo";
             this.Equipo.UseVisualStyleBackColor = true;
             // 
+            // txtRespuestaEquipo
+            // 
+            this.txtRespuestaEquipo.Location = new System.Drawing.Point(8, 210);
+            this.txtRespuestaEquipo.Multiline = true;
+            this.txtRespuestaEquipo.Name = "txtRespuestaEquipo";
+            this.txtRespuestaEquipo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtRespuestaEquipo.Size = new System.Drawing.Size(943, 154);
+            this.txtRespuestaEquipo.TabIndex = 41;
+            this.txtRespuestaEquipo.Tag = "txtResultado";
+            this.txtRespuestaEquipo.Text = "Version 2";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -941,6 +964,80 @@
             this.chbBO.Text = "Bolivia";
             this.chbBO.UseVisualStyleBackColor = true;
             // 
+            // tpGroupFile
+            // 
+            this.tpGroupFile.Controls.Add(this.label13);
+            this.tpGroupFile.Controls.Add(this.label12);
+            this.tpGroupFile.Controls.Add(this.txtFileExtension);
+            this.tpGroupFile.Controls.Add(this.textBox5);
+            this.tpGroupFile.Controls.Add(this.btnGroupFile);
+            this.tpGroupFile.Controls.Add(this.label10);
+            this.tpGroupFile.Controls.Add(this.txtDirectoryEnd);
+            this.tpGroupFile.Controls.Add(this.label11);
+            this.tpGroupFile.Controls.Add(this.txtDirectoryOrigin);
+            this.tpGroupFile.Location = new System.Drawing.Point(4, 22);
+            this.tpGroupFile.Name = "tpGroupFile";
+            this.tpGroupFile.Padding = new System.Windows.Forms.Padding(3);
+            this.tpGroupFile.Size = new System.Drawing.Size(975, 462);
+            this.tpGroupFile.TabIndex = 3;
+            this.tpGroupFile.Text = "Juntar Archivos";
+            this.tpGroupFile.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(11, 179);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox5.Size = new System.Drawing.Size(943, 154);
+            this.textBox5.TabIndex = 47;
+            this.textBox5.Tag = "txtResultado";
+            this.textBox5.Text = "Version 2";
+            // 
+            // btnGroupFile
+            // 
+            this.btnGroupFile.Location = new System.Drawing.Point(143, 127);
+            this.btnGroupFile.Name = "btnGroupFile";
+            this.btnGroupFile.Size = new System.Drawing.Size(123, 23);
+            this.btnGroupFile.TabIndex = 46;
+            this.btnGroupFile.Text = "Agrupar Archivos";
+            this.btnGroupFile.UseVisualStyleBackColor = true;
+            this.btnGroupFile.Click += new System.EventHandler(this.btnGroupFile_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 13);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Ruta Carpeta Resultado:";
+            // 
+            // txtDirectoryEnd
+            // 
+            this.txtDirectoryEnd.Location = new System.Drawing.Point(143, 82);
+            this.txtDirectoryEnd.Name = "txtDirectoryEnd";
+            this.txtDirectoryEnd.Size = new System.Drawing.Size(731, 20);
+            this.txtDirectoryEnd.TabIndex = 44;
+            this.txtDirectoryEnd.Text = "D:\\Migrar";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 51);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 13);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "Ruta Carpeta Origen:";
+            // 
+            // txtDirectoryOrigin
+            // 
+            this.txtDirectoryOrigin.Location = new System.Drawing.Point(143, 48);
+            this.txtDirectoryOrigin.Name = "txtDirectoryOrigin";
+            this.txtDirectoryOrigin.Size = new System.Drawing.Size(731, 20);
+            this.txtDirectoryOrigin.TabIndex = 42;
+            this.txtDirectoryOrigin.Text = "D:\\Proyectos\\Sb2-Dev1\\PortalConsultoras2\\app\\Portal.Consultoras.Web\\";
+            // 
             // tcBD
             // 
             this.tcBD.Controls.Add(this.tabPage1);
@@ -951,16 +1048,31 @@
             this.tcBD.Size = new System.Drawing.Size(997, 520);
             this.tcBD.TabIndex = 0;
             // 
-            // txtRespuestaEquipo
+            // label12
             // 
-            this.txtRespuestaEquipo.Location = new System.Drawing.Point(8, 210);
-            this.txtRespuestaEquipo.Multiline = true;
-            this.txtRespuestaEquipo.Name = "txtRespuestaEquipo";
-            this.txtRespuestaEquipo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRespuestaEquipo.Size = new System.Drawing.Size(943, 154);
-            this.txtRespuestaEquipo.TabIndex = 41;
-            this.txtRespuestaEquipo.Tag = "txtResultado";
-            this.txtRespuestaEquipo.Text = "Version 2";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 13);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Extensión de Archivo:";
+            // 
+            // txtFileExtension
+            // 
+            this.txtFileExtension.Location = new System.Drawing.Point(143, 18);
+            this.txtFileExtension.Name = "txtFileExtension";
+            this.txtFileExtension.Size = new System.Drawing.Size(95, 20);
+            this.txtFileExtension.TabIndex = 48;
+            this.txtFileExtension.Text = "*.cshtml";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(244, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 13);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Ejm: *.cshtml;*.js;*.css     ";
             // 
             // Form1
             // 
@@ -978,6 +1090,8 @@
             this.tabPage4.PerformLayout();
             this.Equipo.ResumeLayout(false);
             this.Equipo.PerformLayout();
+            this.tpGroupFile.ResumeLayout(false);
+            this.tpGroupFile.PerformLayout();
             this.tcBD.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1057,6 +1171,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox paseUrlGenerado;
         private System.Windows.Forms.TextBox txtRespuestaEquipo;
+        private System.Windows.Forms.TabPage tpGroupFile;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnGroupFile;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDirectoryEnd;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtDirectoryOrigin;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtFileExtension;
+        private System.Windows.Forms.Label label13;
     }
 }
 

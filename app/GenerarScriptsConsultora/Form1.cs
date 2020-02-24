@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenerarScriptsConsultora.Helper;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -8,8 +9,10 @@ namespace GenerarScriptsConsultora
 {
     public partial class Form1 : Form
     {
+        protected UtilFile util;
         public Form1()
         {
+            util = new UtilFile();
             InitializeComponent();
         }
 
@@ -963,6 +966,55 @@ namespace GenerarScriptsConsultora
 
             return cadena;
         }
+        #endregion
+
+        #region  Group File
+        private void btnGroupFile_Click(object sender, EventArgs e)
+        {
+            string txtExtension = txtFileExtension.Text.Trim();
+            string txtOrigin = txtDirectoryOrigin.Text.Trim();
+            string txtFin = txtDirectoryEnd.Text.Trim();
+
+            string mensaje = GroupFile_ValidarParametros(txtExtension, txtOrigin, txtFin);
+
+            if (mensaje != "")
+            {
+                MessageBox.Show(mensaje, "Juntar archivos en una sola carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            mensaje = util.GroupFileToDirectory(txtExtension, txtOrigin, txtFin);
+            if (mensaje != "")
+            {
+                MessageBox.Show(mensaje, "Juntar archivos en una sola carpeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Termino el proceso exitosamente", "Juntar archivos en una sola carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
+
+        private string GroupFile_ValidarParametros(string txtExtension, string txtOrigin, string txtFin)
+        {
+            if (txtExtension == "")
+            {
+                return "Poner Extensión de archivos, en caso sea todos poner *.*";
+            }
+
+            if (!util.DirectoryExists(txtOrigin))
+            {
+                return "Directoriio de Origen No Existe";
+            }
+
+            util.CreateDirectory(txtFin);
+            if (!util.DirectoryExists(txtFin))
+            {
+                return "Directoriio de Origen No Existe";
+            }
+
+            return "";
+        }
+
         #endregion
     }
 }

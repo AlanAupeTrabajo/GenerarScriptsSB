@@ -37,3 +37,12 @@ E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScri
 E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.exe
 E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.pdb
 E:\Proyectos\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.csprojAssemblyReference.cache
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\bin\Debug\GenerarScriptsConsultora.exe.config
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\bin\Debug\GenerarScriptsConsultora.exe
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\bin\Debug\GenerarScriptsConsultora.pdb
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.Form1.resources
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.Properties.Resources.resources
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.csproj.GenerateResource.cache
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.csproj.CoreCompileInputs.cache
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.exe
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.pdb
