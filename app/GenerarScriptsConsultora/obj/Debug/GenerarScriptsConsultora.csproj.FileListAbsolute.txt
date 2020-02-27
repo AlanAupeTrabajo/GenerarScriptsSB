@@ -46,3 +46,4 @@ D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora
 D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.csproj.CoreCompileInputs.cache
 D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.exe
 D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.pdb
+D:\Proyectos\Alan_GenerarScriptsSB\GenerarScriptsSB\app\GenerarScriptsConsultora\obj\Debug\GenerarScriptsConsultora.csprojResolveAssemblyReference.cache

@@ -100,6 +100,9 @@
             this.chbCL = new System.Windows.Forms.CheckBox();
             this.chbBO = new System.Windows.Forms.CheckBox();
             this.tpGroupFile = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtFileExtension = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnGroupFile = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -107,9 +110,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtDirectoryOrigin = new System.Windows.Forms.TextBox();
             this.tcBD = new System.Windows.Forms.TabControl();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtFileExtension = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.chbGroupInDirectory = new System.Windows.Forms.CheckBox();
             this.tabPage1.SuspendLayout();
             this.tcTiposBD57.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -966,6 +967,7 @@
             // 
             // tpGroupFile
             // 
+            this.tpGroupFile.Controls.Add(this.chbGroupInDirectory);
             this.tpGroupFile.Controls.Add(this.label13);
             this.tpGroupFile.Controls.Add(this.label12);
             this.tpGroupFile.Controls.Add(this.txtFileExtension);
@@ -982,6 +984,32 @@
             this.tpGroupFile.TabIndex = 3;
             this.tpGroupFile.Text = "Juntar Archivos";
             this.tpGroupFile.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(244, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 13);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Ejm: *.cshtml;*.js;*.css     ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 13);
+            this.label12.TabIndex = 49;
+            this.label12.Text = "Extensión de Archivo:";
+            // 
+            // txtFileExtension
+            // 
+            this.txtFileExtension.Location = new System.Drawing.Point(143, 18);
+            this.txtFileExtension.Name = "txtFileExtension";
+            this.txtFileExtension.Size = new System.Drawing.Size(95, 20);
+            this.txtFileExtension.TabIndex = 48;
+            this.txtFileExtension.Text = "*.cshtml";
             // 
             // textBox5
             // 
@@ -1048,31 +1076,18 @@
             this.tcBD.Size = new System.Drawing.Size(997, 520);
             this.tcBD.TabIndex = 0;
             // 
-            // label12
+            // chbGroupInDirectory
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 13);
-            this.label12.TabIndex = 49;
-            this.label12.Text = "Extensión de Archivo:";
-            // 
-            // txtFileExtension
-            // 
-            this.txtFileExtension.Location = new System.Drawing.Point(143, 18);
-            this.txtFileExtension.Name = "txtFileExtension";
-            this.txtFileExtension.Size = new System.Drawing.Size(95, 20);
-            this.txtFileExtension.TabIndex = 48;
-            this.txtFileExtension.Text = "*.cshtml";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(244, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 13);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "Ejm: *.cshtml;*.js;*.css     ";
+            this.chbGroupInDirectory.AutoSize = true;
+            this.chbGroupInDirectory.Checked = true;
+            this.chbGroupInDirectory.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbGroupInDirectory.Location = new System.Drawing.Point(477, 17);
+            this.chbGroupInDirectory.Name = "chbGroupInDirectory";
+            this.chbGroupInDirectory.Size = new System.Drawing.Size(93, 17);
+            this.chbGroupInDirectory.TabIndex = 52;
+            this.chbGroupInDirectory.Tag = "";
+            this.chbGroupInDirectory.Text = "Sub Carpetas:";
+            this.chbGroupInDirectory.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1181,6 +1196,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtFileExtension;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox chbGroupInDirectory;
     }
 }
 

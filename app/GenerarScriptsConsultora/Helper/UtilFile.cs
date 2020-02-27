@@ -29,20 +29,22 @@ namespace GenerarScriptsConsultora.Helper
             return name;
         }
 
-        public string GroupFileToDirectory(string fileExtension, string getDirectory, string setDirectory)
+        public string GroupFileToDirectory(string fileExtension, string getDirectory, string setDirectory, bool inDirectory)
         {
             string mensaje = "";
             try
             {
-                string[] directories = System.IO.Directory.GetDirectories(getDirectory);
-                if (directories.Length > 0)
+                if (inDirectory)
                 {
-                    CopyFileByDirectory(getDirectory, fileExtension, getDirectory, setDirectory);
+                    string[] directories = System.IO.Directory.GetDirectories(getDirectory);
+                    if (directories.Length > 0)
+                    {
+                        CopyFileByDirectory(getDirectory, fileExtension, getDirectory, setDirectory);
+                        return mensaje;
+                    }
                 }
-                else
-                {
-                    CopyFileToDirectory(getDirectory, fileExtension, getDirectory, setDirectory);
-                }
+
+                CopyFileToDirectory(getDirectory, fileExtension, getDirectory, setDirectory);
             }
             catch (System.Exception ex)
             {
@@ -54,17 +56,16 @@ namespace GenerarScriptsConsultora.Helper
 
         public void CopyFileByDirectory(string getDirectory, string fileExtension, string getDirectoryIni, string setDirectory)
         {
-            string[] directories = System.IO.Directory.GetDirectories(getDirectory);
+            CopyFileToDirectory(getDirectory, fileExtension, getDirectoryIni, setDirectory);
+
+            string[] directories = Directory.GetDirectories(getDirectory);
+
+            if (directories.Length == 0)
+                return;
 
             foreach (string directory in directories)
             {
-                CopyFileToDirectory(directory, fileExtension, getDirectoryIni, setDirectory);
-
-                string[] directoriesCh = System.IO.Directory.GetDirectories(directory);
-                if (directoriesCh.Length > 0)
-                {
-                    CopyFileByDirectory(directory, fileExtension, getDirectoryIni, setDirectory);
-                }
+                CopyFileByDirectory(directory, fileExtension, getDirectoryIni, setDirectory);
             }
         }
 
@@ -83,14 +84,14 @@ namespace GenerarScriptsConsultora.Helper
             string newNameFile = getDirectory.Replace(getDirectoryIni, "");
             newNameFile = newNameFile.Replace(@"/", @"_");
             newNameFile = newNameFile.Replace(@"\", @"_");
-            
-            if (newNameFile[0].ToString() == @"_")
+
+            if (newNameFile != "" && newNameFile[0].ToString() == @"_")
             {
-                newNameFile = newNameFile.Substring(1);
+                newNameFile = newNameFile.Substring(1) + "_";
             }
 
             string name = GetFileName(file);
-            string newPathAndName = Path.Combine(setDirectory, newNameFile + "_" + name);
+            string newPathAndName = Path.Combine(setDirectory, newNameFile + name);
 
             return newPathAndName;
         }

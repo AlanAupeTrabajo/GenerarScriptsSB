@@ -983,7 +983,8 @@ namespace GenerarScriptsConsultora
                 return;
             }
 
-            mensaje = util.GroupFileToDirectory(txtExtension, txtOrigin, txtFin);
+            bool groupInDirectory = chbGroupInDirectory.Checked;
+            mensaje = util.GroupFileToDirectory(txtExtension, txtOrigin, txtFin, groupInDirectory);
             if (mensaje != "")
             {
                 MessageBox.Show(mensaje, "Juntar archivos en una sola carpeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
