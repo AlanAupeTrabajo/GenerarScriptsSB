@@ -100,6 +100,7 @@
             this.chbCL = new System.Windows.Forms.CheckBox();
             this.chbBO = new System.Windows.Forms.CheckBox();
             this.tpGroupFile = new System.Windows.Forms.TabPage();
+            this.chbGroupInDirectory = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtFileExtension = new System.Windows.Forms.TextBox();
@@ -110,7 +111,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtDirectoryOrigin = new System.Windows.Forms.TextBox();
             this.tcBD = new System.Windows.Forms.TabControl();
-            this.chbGroupInDirectory = new System.Windows.Forms.CheckBox();
+            this.bpCboxGo = new System.Windows.Forms.CheckBox();
             this.tabPage1.SuspendLayout();
             this.tcTiposBD57.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -146,6 +147,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.bpCboxGo);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.textBox2);
             this.tabPage3.Controls.Add(this.label6);
@@ -985,6 +987,19 @@
             this.tpGroupFile.Text = "Juntar Archivos";
             this.tpGroupFile.UseVisualStyleBackColor = true;
             // 
+            // chbGroupInDirectory
+            // 
+            this.chbGroupInDirectory.AutoSize = true;
+            this.chbGroupInDirectory.Checked = true;
+            this.chbGroupInDirectory.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbGroupInDirectory.Location = new System.Drawing.Point(477, 17);
+            this.chbGroupInDirectory.Name = "chbGroupInDirectory";
+            this.chbGroupInDirectory.Size = new System.Drawing.Size(93, 17);
+            this.chbGroupInDirectory.TabIndex = 52;
+            this.chbGroupInDirectory.Tag = "";
+            this.chbGroupInDirectory.Text = "Sub Carpetas:";
+            this.chbGroupInDirectory.UseVisualStyleBackColor = true;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -1076,18 +1091,18 @@
             this.tcBD.Size = new System.Drawing.Size(997, 520);
             this.tcBD.TabIndex = 0;
             // 
-            // chbGroupInDirectory
+            // bpCboxGo
             // 
-            this.chbGroupInDirectory.AutoSize = true;
-            this.chbGroupInDirectory.Checked = true;
-            this.chbGroupInDirectory.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbGroupInDirectory.Location = new System.Drawing.Point(477, 17);
-            this.chbGroupInDirectory.Name = "chbGroupInDirectory";
-            this.chbGroupInDirectory.Size = new System.Drawing.Size(93, 17);
-            this.chbGroupInDirectory.TabIndex = 52;
-            this.chbGroupInDirectory.Tag = "";
-            this.chbGroupInDirectory.Text = "Sub Carpetas:";
-            this.chbGroupInDirectory.UseVisualStyleBackColor = true;
+            this.bpCboxGo.AutoSize = true;
+            this.bpCboxGo.Checked = true;
+            this.bpCboxGo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.bpCboxGo.Location = new System.Drawing.Point(382, 26);
+            this.bpCboxGo.Name = "bpCboxGo";
+            this.bpCboxGo.Size = new System.Drawing.Size(68, 17);
+            this.bpCboxGo.TabIndex = 27;
+            this.bpCboxGo.Tag = "";
+            this.bpCboxGo.Text = "Con \'GO\'";
+            this.bpCboxGo.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1197,6 +1212,7 @@
         private System.Windows.Forms.TextBox txtFileExtension;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox chbGroupInDirectory;
+        private System.Windows.Forms.CheckBox bpCboxGo;
     }
 }
 

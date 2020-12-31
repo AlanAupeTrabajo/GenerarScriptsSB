@@ -87,11 +87,11 @@ namespace GenerarScriptsConsultora.Helper
 
             if (newNameFile != "" && newNameFile[0].ToString() == @"_")
             {
-                newNameFile = newNameFile.Substring(1) + "_";
+                newNameFile = newNameFile.Substring(1);
             }
 
             string name = GetFileName(file);
-            string newPathAndName = Path.Combine(setDirectory, newNameFile + name);
+            string newPathAndName = Path.Combine(setDirectory, newNameFile + "_" + name);
 
             return newPathAndName;
         }

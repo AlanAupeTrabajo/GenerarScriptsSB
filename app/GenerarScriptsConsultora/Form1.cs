@@ -58,7 +58,7 @@ namespace GenerarScriptsConsultora
                 if (control.GetType().ToString() == "System.Windows.Forms.CheckBox")
                 {
                     CheckBox chkPais = (CheckBox)control;
-                    if (chkPais.Checked)
+                    if (chkPais.Tag.ToString() != "" && chkPais.Checked)
                     {
                         paises.Add(chkPais.Tag.ToString());
                     }
@@ -89,19 +89,30 @@ namespace GenerarScriptsConsultora
 
             //Formatear(script);
 
+            bool conTxtGo = bpCboxGo.Checked;
+
             StringBuilder scriptGenerado = new StringBuilder();
-            scriptGenerado.Append("GO");
-            scriptGenerado.AppendLine();
+            if (conTxtGo)
+            {
+                scriptGenerado.Append("GO");
+                scriptGenerado.AppendLine();
+            }
             foreach (string pais in paises)
             {
                 scriptGenerado.Append("USE " + pais);
                 scriptGenerado.AppendLine();
-                scriptGenerado.Append("GO");
-                scriptGenerado.AppendLine();
+                if (conTxtGo)
+                {
+                    scriptGenerado.Append("GO");
+                    scriptGenerado.AppendLine();
+                }
                 scriptGenerado.Append(script);
                 scriptGenerado.AppendLine();
-                scriptGenerado.Append("GO");
-                scriptGenerado.AppendLine();
+                if (conTxtGo)
+                {
+                    scriptGenerado.Append("GO");
+                    scriptGenerado.AppendLine();
+                }
             }
 
             txtResultado.Text = scriptGenerado.ToString();
